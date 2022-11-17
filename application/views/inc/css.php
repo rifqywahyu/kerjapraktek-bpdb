@@ -18,8 +18,8 @@
 
 
 <!-- CORE CSS-->
-<link href="<?php echo base_url()?>assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-<link href="<?php echo base_url()?>assets/css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+<!-- <link href="<?php echo base_url()?>assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"> -->
+<!-- <link href="<?php echo base_url()?>assets/css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection"> -->
 <!-- CSS style Horizontal Nav-->
 <link href="<?php echo base_url()?>assets/css/layouts/style-horizontal.css" type="text/css" rel="stylesheet" media="screen,projection">
 <!-- Custome CSS-->

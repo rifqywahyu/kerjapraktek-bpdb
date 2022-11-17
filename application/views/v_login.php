@@ -11,7 +11,7 @@
   <title>Login Page | Sleman WEB Apps</title>
 
   <!-- Favicons-->
-<link rel="icon" href="<?php echo base_url()?>assets/images/favicon/logo_.png" sizes="32x32">
+  <link rel="icon" href="<?php echo base_url()?>assets/images/favicon/logo_.png" sizes="32x32">
   <!-- Favicons-->
   <link rel="apple-touch-icon-precomposed" href="images/favicon/logo_.png">
   <!-- For iPhone -->
@@ -22,19 +22,21 @@
 
   <!-- CORE CSS-->
 
-<link href="<?php echo base_url()?>assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-<link href="<?php echo base_url()?>assets/css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-    <!-- Custome CSS-->
-    <link href="<?php echo base_url()?>assets/css/custom/custom.min.css" type="text/css" rel="stylesheet" media="screen,projection">
+  <!-- <link href="<?php echo base_url()?>assets/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"> -->
+  <!-- <link href="<?php echo base_url()?>assets/css/style.min.css" type="text/css" rel="stylesheet" media="screen,projection"> -->
+  <!-- Custome CSS-->
+  <link href="<?php echo base_url()?>assets/css/custom/custom.min.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="<?php echo base_url()?>assets/css/layouts/page-center.css" type="text/css" rel="stylesheet" media="screen,projection">
 
   <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
   <link href="<?php echo base_url()?>assets/js/plugins/prism/prism.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="<?php echo base_url()?>assets/js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
-
+  <!-- validationEngine -->
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/validationEngine.jquery.css">
+  <?php include('inc/ncss_main.php') ?>
 </head>
 
-<body class="cyan">
+<body class="hold-transition login-page">
   <!-- Start Page Loading -->
   <div id="loader-wrapper">
       <div id="loader"></div>
@@ -45,48 +47,56 @@
 
 
 
-  <div id="login-page" class="row">
-    <div class="col s12 z-depth-4 card-panel">
+  
+  <div class="login-box">
+    <div class="login-logo">
+      <a href="#"><img src="<?php echo base_url()?>assets/img/logo.png" style="height: 20px;" alt="Logo" class="brand-image"></a>
+    </div>
+    <!-- /.login-logo -->
+    <div class="card">
+      <div class="card-body login-card-body">
+        <p class="login-box-msg">LOGIN PAGE SLEMAN WEB APPS</p>
 
-      <div id="padding" style="padding-top:12px;">
-            <?php include("inc/info.php") ?>
+        <form action="index4login.php" method="post">
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="Email">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-envelope"></span>
+              </div>
+            </div>
+          </div>
+          <div class="input-group mb-3">
+            <input type="password" class="form-control" placeholder="Password">
+            <div class="input-group-append">
+              <div class="input-group-text">
+                <span class="fas fa-lock"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <div class="icheck-primary">
+                <input type="checkbox" id="remember">
+                <label for="remember">
+                  Remember Me
+                </label>
+              </div>
+            </div>
+            <!-- /.col -->
+            <div class="col-4">
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </div>
+            <!-- /.col -->
+          </div>
+        </form>
+        <!-- /.social-auth-links -->
+
+        <p class="mb-1">
+          <a href="forgot-password.html">I forgot my password</a>
+        </p>
       </div>
-      <form class="login-form" id="formValidate" action="<?php echo base_url()?>login/proses_masuk" method="post">
-        <div class="row">
-          <div class="input-field col s12 center">
-            <img src="<?php echo base_url()?>assets/img/logo.png" alt="" class=" responsive-img ">
-            <p class="center login-form-text">Login Page Sleman WEB Apps</p>
-          </div>
-        </div>
-        <div class="row margin">
-          <div class="input-field col s12">
-            <i class="mdi-social-person-outline prefix"></i>
-            <input id="username" name="email" type="email" required data-error=".errorTxt1">
-			         <div class="errorTxt1"></div>
-            <label for="username" class="center-align">Email</label>
-          </div>
-        </div>
-        <div class="row margin">
-          <div class="input-field col s12">
-            <i class="mdi-action-lock-outline prefix"></i>
-            <input id="password" type="password" name="password" required data-error=".errorTxt2">
-            <div class="errorTxt2"></div>
-            <label for="password">Password</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12 m12 l12  login-text">
-              <input type="checkbox" id="remember-me" />
-              <label for="remember-me">Remember me</label>
-          </div>
-        </div>
-        <div class="row">
-          <div class="input-field col s12">
-            <button class="btn waves-effect waves-light col s12" type="submit">Login</button>
-          </div>
-        </div>
-
-      </form>
+      <!-- /.login-card-body -->
     </div>
   </div>
 
@@ -96,8 +106,7 @@
     Scripts
     ================================================ -->
 
-<!-- validationEngine -->
-<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>assets/css/validationEngine.jquery.css">
+  <?php include('inc/nscript.php') ?>
   <!-- jQuery Library -->
   <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/jquery-1.11.2.min.js"></script>
   <!--materialize js-->
@@ -107,13 +116,13 @@
   <!--scrollbar-->
   <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
 
-      <!--plugins.js - Some Specific JS codes for Plugin Settings-->
-    <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins.min.js"></script>
-    <!--custom-script.js - Add your own theme custom JS-->
-    <script type="text/javascript" src="<?php echo base_url()?>assets/js/custom-script.js"></script>
+  <!--plugins.js - Some Specific JS codes for Plugin Settings-->
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins.min.js"></script>
+  <!--custom-script.js - Add your own theme custom JS-->
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/custom-script.js"></script>
 
-<!-- validationEngine -->
-<script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
+  <!-- validationEngine -->
+  <script type="text/javascript" src="<?php echo base_url()?>assets/js/plugins/jquery-validation/jquery.validate.min.js"></script>
 	<script>
 
     $("#formValidate").validate({
@@ -129,7 +138,7 @@
        });
 
 
-    </script>
+</script>
 </body>
 
 
