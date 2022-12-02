@@ -50,16 +50,17 @@
   
   <div class="login-box">
     <div class="login-logo">
-      <a href="#"><img src="<?php echo base_url()?>assets/img/logo.png" style="height: 20px;" alt="Logo" class="brand-image"></a>
+      <a href="<?= base_url(); ?>"><img src="<?php echo base_url()?>assets/img/logo.png" style="height: 20px;" alt="Logo" class="brand-image"></a>
     </div>
     <!-- /.login-logo -->
     <div class="card">
       <div class="card-body login-card-body">
         <p class="login-box-msg">LOGIN PAGE SLEMAN WEB APPS</p>
 
-        <form action="index4login.php" method="post">
+        <form class="login-form" id="formValidate" action="<?php echo base_url()?>login/proses_masuk" method="post">
           <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="Email">
+            <input id="username" name="email" type="email" required data-error=".errorTxt1">
+			  <div class="errorTxt1"></div>
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-envelope"></span>
@@ -67,7 +68,8 @@
             </div>
           </div>
           <div class="input-group mb-3">
-            <input type="password" class="form-control" placeholder="Password">
+            <input id="password" type="password" name="password" required data-error=".errorTxt2">
+			  <div class="errorTxt2"></div>
             <div class="input-group-append">
               <div class="input-group-text">
                 <span class="fas fa-lock"></span>
@@ -77,7 +79,7 @@
           <div class="row">
             <div class="col-8">
               <div class="icheck-primary">
-                <input type="checkbox" id="remember">
+                <input type="checkbox" id="remember-me">
                 <label for="remember">
                   Remember Me
                 </label>
