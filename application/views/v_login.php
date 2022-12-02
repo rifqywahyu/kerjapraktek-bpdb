@@ -56,25 +56,24 @@
     <div class="card">
       <div class="card-body login-card-body">
         <p class="login-box-msg">LOGIN PAGE SLEMAN WEB APPS</p>
-
         <form class="login-form" id="formValidate" action="<?php echo base_url()?>login/proses_masuk" method="post">
           <div class="input-group mb-3">
-            <input id="username" name="email" type="email" required data-error=".errorTxt1">
-			  <div class="errorTxt1"></div>
             <div class="input-group-append">
+			  <input id="username" name="email" type="email" required data-error=".errorTxt1">
               <div class="input-group-text">
-                <span class="fas fa-envelope"></span>
+                <span class="fas fa-envelope"></span>				  
               </div>
             </div>
+			<div class="errorTxt1"></div>  
           </div>
           <div class="input-group mb-3">
-            <input id="password" type="password" name="password" required data-error=".errorTxt2">
-			  <div class="errorTxt2"></div>
             <div class="input-group-append">
+			  <input id="password" type="password" name="password" required data-error=".errorTxt2">
               <div class="input-group-text">
-                <span class="fas fa-lock"></span>
-              </div>
+				<span class="fas fa-lock"></span>
+              </div>	
             </div>
+			<div class="errorTxt2"></div>
           </div>
           <div class="row">
             <div class="col-8">
