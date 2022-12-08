@@ -53,7 +53,7 @@ class Login extends CI_Controller {
 				$this->session->set_userdata($data);
 				redirect(base_url('tr_approval'));
 		}else{
-				$this->session->set_flashdata('error', 'npk/password is not correct');
+				$this->session->set_flashdata('error', 'email/password is not correct');
 				redirect(base_url('login'));
 		}
 	}
