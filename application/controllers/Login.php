@@ -51,7 +51,7 @@ class Login extends CI_Controller {
 						'idtbluser'=>$valid->idtbluser
 				);
 				$this->session->set_userdata($data);
-				redirect(base_url('tr_approval'));
+				redirect(base_url('main/index_admin'));
 		}else{
 				$this->session->set_flashdata('error', 'npk/password is not correct');
 				redirect(base_url('login'));

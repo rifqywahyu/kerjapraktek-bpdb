@@ -25,6 +25,18 @@ class Main extends CI_Controller {
 		$this->load->view('v_main', $data);
 	}
 
+	public function index_admin() {
+		$filter 	= new filter();
+		$from 		= $filter->clean($this->input->get("dari"));
+		$to 			= $filter->clean($this->input->get("hingga"));
+
+		$range = $from.' - '.$to;
+		$this->load->model("Lap_model", "_lap");
+		$data["data"] = $this->_lap->data_kejadian_live('1', $from, $to)->result();
+		$data['range'] = $range;
+		$this->load->view('nv_main-login', $data);
+	}
+
 	// public function
 
 	function tambah(){

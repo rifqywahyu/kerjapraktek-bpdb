@@ -471,6 +471,14 @@
               </li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a href="<?php echo base_url('logoff/off')?>" class="nav-link">
+              <i class="nav-icon fa fa-arrow-circle-right"></i>
+              <p>
+                Logout
+              </p>
+            </a>
+          </li>
           
         </ul>
       </nav>
